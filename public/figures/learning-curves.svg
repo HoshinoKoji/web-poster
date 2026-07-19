@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative cumulative reward curves</title>
+  <desc id="desc">The structured prior condition rises faster than the independent prior and uninformative prior conditions.</desc>
+  <rect width="920" height="430" rx="24" fill="#ffffff"/>
+  <g stroke="#e5dce0" stroke-width="2">
+    <path d="M90 45v310M90 355h770" stroke="#8f8389" stroke-width="3"/>
+    <path d="M90 285h770M90 215h770M90 145h770M90 75h770"/>
+    <path d="M282 45v310M475 45v310M667 45v310M860 45v310" stroke-dasharray="6 8"/>
+  </g>
+  <g fill="#5f555b" font-family="Inter,Arial,sans-serif" font-size="18">
+    <text x="74" y="362" text-anchor="end">0</text><text x="74" y="292" text-anchor="end">25</text><text x="74" y="222" text-anchor="end">50</text><text x="74" y="152" text-anchor="end">75</text><text x="74" y="82" text-anchor="end">100</text>
+    <text x="90" y="388" text-anchor="middle">0</text><text x="282" y="388" text-anchor="middle">30</text><text x="475" y="388" text-anchor="middle">60</text><text x="667" y="388" text-anchor="middle">90</text><text x="860" y="388" text-anchor="middle">120</text>
+    <text x="475" y="420" text-anchor="middle" font-weight="700">Trial</text>
+    <text transform="translate(24 208) rotate(-90)" text-anchor="middle" font-weight="700">Cumulative reward</text>
+  </g>
+  <path d="M90 355C150 335 205 290 282 247S400 170 475 136 590 91 667 72 780 49 860 42" fill="none" stroke="#8c2b55" stroke-width="13" stroke-linecap="round"/>
+  <path d="M90 355C155 343 213 316 282 285S404 220 475 190 589 139 667 111 783 79 860 64" fill="none" stroke="#e96e9f" stroke-width="11" stroke-linecap="round"/>
+  <path d="M90 355C157 349 216 332 282 312S400 271 475 238 588 190 667 156 781 111 860 86" fill="none" stroke="#a99da3" stroke-width="9" stroke-linecap="round" stroke-dasharray="18 12"/>
+  <g font-family="Inter,Arial,sans-serif" font-size="18" font-weight="800">
+    <rect x="116" y="54" width="298" height="87" rx="18" fill="#fffafb" stroke="#d8cbd1" stroke-width="2"/>
+    <path d="M139 80h42" stroke="#8c2b55" stroke-width="10" stroke-linecap="round"/><text x="194" y="87" fill="#171216">Structured prior</text>
+    <path d="M139 108h42" stroke="#e96e9f" stroke-width="9" stroke-linecap="round"/><text x="194" y="115" fill="#171216">Independent prior</text>
+    <path d="M139 134h42" stroke="#a99da3" stroke-width="8" stroke-dasharray="12 8"/><text x="194" y="141" fill="#171216">Uninformative prior</text>
+  </g>
+  <g font-family="Inter,Arial,sans-serif">
+    <path d="M278 228 342 178" stroke="#171216" stroke-width="3"/>
+    <rect x="342" y="145" width="190" height="57" rx="14" fill="#171216"/>
+    <text x="437" y="171" fill="#ff9fc4" font-size="17" font-weight="800" text-anchor="middle">advantage emerges</text>
+    <text x="437" y="191" fill="#fff" font-size="16" text-anchor="middle">during early exploration</text>
+  </g>
+</svg>
