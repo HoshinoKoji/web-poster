@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "check:static": "bun scripts/check-static-build.ts",
+    "build": "tsc --noEmit && vite build && bun run check:static",
     "preview": "vite preview",
     "pdf": "bun run build && vivliostyle build",
     "pdf:preview": "bun run build && vivliostyle preview"
