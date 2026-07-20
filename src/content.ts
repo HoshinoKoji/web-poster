@@ -1,20 +1,8 @@
+import metadata from '../poster.config.json'
 import type { PosterContent } from './types'
 
 export const posterContent: PosterContent = {
-  eyebrow: 'DEMO POSTER · BEHAVIORAL SCIENCE',
-  title: 'Adaptive exploration under structured uncertainty',
-  subtitle:
-    'A browser-native workflow for turning reproducible analyses into a version-controlled conference poster',
-  authors: [
-    { name: 'A. Researcher', affiliation: 1 },
-    { name: 'B. Collaborator', affiliation: 1 },
-    { name: 'C. Statistician', affiliation: 2, corresponding: true },
-  ],
-  affiliations: [
-    'Department of Example Science, Example University',
-    'Center for Reproducible Research, Example Institute',
-  ],
-  contact: 'poster@example.org · github.com/HoshinoKoji/web-poster',
+  ...metadata.poster,
   keyFinding:
     'Encoding prior covariance improved early exploration without increasing late-stage decision variance.',
   background: [
