@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "poster:new": "bun scripts/create-poster.mjs",
     "check:static": "bun scripts/check-static-build.ts",
     "build": "tsc --noEmit && vite build && bun run check:static",
     "preview": "vite preview",
