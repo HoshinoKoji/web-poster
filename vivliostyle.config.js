@@ -4,7 +4,10 @@ export default defineConfig({
   title: 'Adaptive exploration under structured uncertainty',
   author: 'Example Research Group',
   language: 'en',
-  entry: 'dist/index.html',
+  static: {
+    '/': 'dist',
+  },
+  entry: '/index.html',
   output: {
     path: 'output/web-poster.pdf',
     format: 'pdf',
