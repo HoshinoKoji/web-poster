@@ -1,31 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 285" role="img" aria-labelledby="title desc">
   <title id="title">Independent versus structured uncertainty</title>
   <desc id="desc">Independent options update separately, while structured options share information through covariance.</desc>
-  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#8c2b55"/></marker></defs>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#8c2b55"/>
+    </marker>
+  </defs>
+
+  <!-- Background and panel surfaces -->
   <rect width="920" height="285" rx="24" fill="#fff0f6"/>
-  <g font-family="Inter,Arial,sans-serif">
-    <g transform="translate(36 31)">
-      <rect width="382" height="223" rx="22" fill="#fff" stroke="#d8cbd1" stroke-width="3"/>
-      <text x="191" y="38" text-anchor="middle" font-size="24" font-weight="850" fill="#171216">Independent prior</text>
-      <g transform="translate(62 76)">
-        <circle cx="40" cy="48" r="35" fill="#f8d9e6" stroke="#e96e9f" stroke-width="5"/><text x="40" y="57" text-anchor="middle" font-size="27" font-weight="900" fill="#8c2b55">A</text>
-        <circle cx="129" cy="48" r="35" fill="#f8d9e6" stroke="#e96e9f" stroke-width="5"/><text x="129" y="57" text-anchor="middle" font-size="27" font-weight="900" fill="#8c2b55">B</text>
-        <circle cx="218" cy="48" r="35" fill="#f8d9e6" stroke="#e96e9f" stroke-width="5"/><text x="218" y="57" text-anchor="middle" font-size="27" font-weight="900" fill="#8c2b55">C</text>
-        <text x="129" y="118" text-anchor="middle" font-size="18" fill="#5f555b">one observation updates one option</text>
-      </g>
+  <rect x="36" y="31" width="382" height="223" rx="22" fill="#fff" stroke="#d8cbd1" stroke-width="3"/>
+  <rect x="502" y="31" width="382" height="223" rx="22" fill="#171216"/>
+
+  <!-- Connectors and node geometry -->
+  <path d="M422 142h72" stroke="#8c2b55" stroke-width="8" marker-end="url(#arrow)"/>
+
+  <g transform="translate(98 107)">
+    <circle cx="40" cy="48" r="35" fill="#f8d9e6" stroke="#e96e9f" stroke-width="5"/>
+    <circle cx="129" cy="48" r="35" fill="#f8d9e6" stroke="#e96e9f" stroke-width="5"/>
+    <circle cx="218" cy="48" r="35" fill="#f8d9e6" stroke="#e96e9f" stroke-width="5"/>
+  </g>
+
+  <g transform="translate(564 107)">
+    <path d="M40 48h178" stroke="#ff9fc4" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="40" cy="48" r="35" fill="#8c2b55" stroke="#ff9fc4" stroke-width="5"/>
+    <circle cx="129" cy="48" r="35" fill="#8c2b55" stroke="#ff9fc4" stroke-width="5"/>
+    <circle cx="218" cy="48" r="35" fill="#8c2b55" stroke="#ff9fc4" stroke-width="5"/>
+  </g>
+
+  <!-- Label plate above the connector -->
+  <rect x="425" y="105" width="66" height="28" rx="14" fill="#fffafb" stroke="#e2cbd5" stroke-width="2"/>
+
+  <!-- Foreground text: intentionally last in paint order -->
+  <g font-family="Inter,Arial,sans-serif" text-anchor="middle">
+    <text x="227" y="69" font-size="24" font-weight="850" fill="#171216">Independent prior</text>
+    <text x="693" y="69" font-size="24" font-weight="850" fill="#fff">Structured prior</text>
+
+    <g font-size="27" font-weight="900">
+      <text x="138" y="164" fill="#8c2b55">A</text>
+      <text x="227" y="164" fill="#8c2b55">B</text>
+      <text x="316" y="164" fill="#8c2b55">C</text>
+      <text x="604" y="164" fill="#fff">A</text>
+      <text x="693" y="164" fill="#fff">B</text>
+      <text x="782" y="164" fill="#fff">C</text>
     </g>
-    <g transform="translate(502 31)">
-      <rect width="382" height="223" rx="22" fill="#171216"/>
-      <text x="191" y="38" text-anchor="middle" font-size="24" font-weight="850" fill="#fff">Structured prior</text>
-      <g transform="translate(62 76)">
-        <path d="M40 48h89M129 48h89M40 48 129 48 218 48" stroke="#ff9fc4" stroke-width="8" stroke-linecap="round"/>
-        <circle cx="40" cy="48" r="35" fill="#8c2b55" stroke="#ff9fc4" stroke-width="5"/><text x="40" y="57" text-anchor="middle" font-size="27" font-weight="900" fill="#fff">A</text>
-        <circle cx="129" cy="48" r="35" fill="#8c2b55" stroke="#ff9fc4" stroke-width="5"/><text x="129" y="57" text-anchor="middle" font-size="27" font-weight="900" fill="#fff">B</text>
-        <circle cx="218" cy="48" r="35" fill="#8c2b55" stroke="#ff9fc4" stroke-width="5"/><text x="218" y="57" text-anchor="middle" font-size="27" font-weight="900" fill="#fff">C</text>
-        <text x="129" y="118" text-anchor="middle" font-size="18" fill="#d8cbd1">one observation propagates through covariance</text>
-      </g>
-    </g>
-    <path d="M422 142h72" stroke="#8c2b55" stroke-width="8" marker-end="url(#arrow)"/>
-    <text x="458" y="126" text-anchor="middle" font-size="16" font-weight="800" fill="#8c2b55">encode</text>
+
+    <text x="227" y="225" font-size="18" fill="#5f555b">one observation updates one option</text>
+    <text x="693" y="216" font-size="17" fill="#d8cbd1">
+      <tspan x="693" dy="0">one observation propagates</tspan>
+      <tspan x="693" dy="21">through covariance</tspan>
+    </text>
+
+    <text x="458" y="124" font-size="15" font-weight="800" fill="#8c2b55">encode</text>
   </g>
 </svg>
