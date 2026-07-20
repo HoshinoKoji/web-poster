@@ -1,25 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 370" role="img" aria-labelledby="title desc">
   <title id="title">Illustrative standardized effect estimates</title>
   <desc id="desc">Forest plot showing positive effects on early reward and information gain, a negative effect on regret, and near-zero late variance.</desc>
+
+  <!-- Background and grid -->
   <rect width="760" height="370" rx="24" fill="#fff"/>
   <g stroke="#e5dce0" stroke-width="2">
     <path d="M260 45v260M380 45v260M500 45v260M620 45v260"/>
     <path d="M500 38v280" stroke="#171216" stroke-width="4"/>
   </g>
-  <g fill="#5f555b" font-family="Inter,Arial,sans-serif" font-size="18">
-    <text x="260" y="340" text-anchor="middle">−1.0</text><text x="380" y="340" text-anchor="middle">−0.5</text><text x="500" y="340" text-anchor="middle">0</text><text x="620" y="340" text-anchor="middle">+0.5</text><text x="690" y="340" text-anchor="middle">+0.8</text>
-    <text x="500" y="366" text-anchor="middle" font-weight="700">Standardized effect</text>
-  </g>
-  <g font-family="Inter,Arial,sans-serif" font-size="20" font-weight="750" fill="#171216">
-    <text x="235" y="92" text-anchor="end">Early reward</text><text x="235" y="157" text-anchor="end">Information gain</text><text x="235" y="222" text-anchor="end">Cumulative regret</text><text x="235" y="287" text-anchor="end">Late variance</text>
-  </g>
+
+  <!-- Intervals and point estimates -->
   <g stroke-linecap="round">
-    <path d="M565 84h112" stroke="#8c2b55" stroke-width="9"/><circle cx="622" cy="84" r="15" fill="#8c2b55"/>
-    <path d="M545 149h96" stroke="#e96e9f" stroke-width="9"/><circle cx="592" cy="149" r="15" fill="#e96e9f"/>
-    <path d="M302 214h125" stroke="#8c2b55" stroke-width="9"/><circle cx="365" cy="214" r="15" fill="#8c2b55"/>
-    <path d="M465 279h84" stroke="#a99da3" stroke-width="9"/><circle cx="507" cy="279" r="15" fill="#a99da3"/>
+    <path d="M565 84h112" stroke="#8c2b55" stroke-width="9"/>
+    <circle cx="622" cy="84" r="15" fill="#8c2b55"/>
+
+    <path d="M545 149h96" stroke="#e96e9f" stroke-width="9"/>
+    <circle cx="592" cy="149" r="15" fill="#e96e9f"/>
+
+    <path d="M302 214h125" stroke="#8c2b55" stroke-width="9"/>
+    <circle cx="365" cy="214" r="15" fill="#8c2b55"/>
+
+    <path d="M465 279h84" stroke="#a99da3" stroke-width="9"/>
+    <circle cx="507" cy="279" r="15" fill="#a99da3"/>
   </g>
-  <g font-family="Inter,Arial,sans-serif" font-size="17" font-weight="800">
-    <text x="696" y="90" fill="#8c2b55">0.51</text><text x="657" y="155" fill="#8c2b55">0.38</text><text x="280" y="220" fill="#8c2b55">−0.56</text><text x="563" y="285" fill="#5f555b">0.03</text>
+
+  <!-- Foreground text: intentionally last in paint order -->
+  <g font-family="Inter,Arial,sans-serif">
+    <g fill="#5f555b" font-size="18">
+      <text x="260" y="340" text-anchor="middle">−1.0</text>
+      <text x="380" y="340" text-anchor="middle">−0.5</text>
+      <text x="500" y="340" text-anchor="middle">0</text>
+      <text x="620" y="340" text-anchor="middle">+0.5</text>
+      <text x="690" y="340" text-anchor="middle">+0.8</text>
+      <text x="500" y="366" text-anchor="middle" font-weight="700">Standardized effect</text>
+    </g>
+
+    <g font-size="20" font-weight="750" fill="#171216" text-anchor="end">
+      <text x="235" y="92">Early reward</text>
+      <text x="235" y="157">Information gain</text>
+      <text x="235" y="222">Cumulative regret</text>
+      <text x="235" y="287">Late variance</text>
+    </g>
+
+    <g font-size="17" font-weight="800" paint-order="stroke fill" stroke="#fff" stroke-width="8" stroke-linejoin="round">
+      <text x="696" y="90" fill="#8c2b55">0.51</text>
+      <text x="657" y="155" fill="#8c2b55">0.38</text>
+      <text x="290" y="220" text-anchor="end" fill="#8c2b55">−0.56</text>
+      <text x="563" y="285" fill="#5f555b">0.03</text>
+    </g>
   </g>
 </svg>
